@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/slide-toggle/SlideToggle.uss?fileID=7433441132597879392&amp;guid=6af47984b3d6e4a01a7a5ac1b11431ff&amp;type=3#SlideToggle" />
+    <Style src="project://database/Assets/slide-toggle/testexample.uss?fileID=7433441132597879392&amp;guid=e61c4843d5aa543879f4d2545f6e3c10&amp;type=3#testexample" />
+    <ui:VisualElement name="main" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <MyUILibrary.SlideToggle name="mytoggle" style="height: 50px;" />
+        <Picking.ColorFieldElement color-attr="f97139" />
+        <Picking.ColorDropdownField choices="System.Collections.Generic.List`1[System.String]" />
+    </ui:VisualElement>
+</ui:UXML>

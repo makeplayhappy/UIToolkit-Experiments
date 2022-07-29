@@ -1,0 +1,390 @@
+:root {
+    --rounded-radius: 8px;
+    --primary-background: rgb(13, 110, 253);
+    --primary-foreground: rgb(255, 255, 255);
+    --secondary-background: rgb(108, 117, 125);
+    --secondary-foreground: rgb(255, 255, 255);
+    --success-background: rgb(25, 135, 84);
+    --success-foreground: rgb(255, 255, 255);
+    --info-background: rgb(13, 202, 240);
+    --info-foreground: rgb(0, 0, 0);
+    --warning-background: rgb(255, 193, 7);
+    --warning-foreground: rgb(0, 0, 0);
+    --danger-background: rgb(220, 53, 69);
+    --danger-foreground: rgb(255, 255, 255);
+    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
+    -unity-font: resource('Fonts/Rubik/static/Rubik-Regular');
+}
+
+:root {
+    flex-grow: 1;
+    -unity-font-definition: resource('Fonts/Rubik-Regular SDF');
+    font-size: 16px;
+}
+
+.h1 {
+    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
+}
+
+.h2 {
+    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
+}
+
+.h3 {
+    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
+}
+
+.h4 {
+    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
+}
+
+.h1 {
+    font-size: 180%;
+}
+
+.h2 {
+    font-size: 160%;
+}
+
+.h3 {
+    font-size: 140%;
+}
+
+.h4 {
+    font-size: 120%;
+}
+
+#body {
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(135, 111, 71);
+}
+
+#header {
+    background-color: rgb(183, 212, 177);
+    width: 100%;
+    height: 64px;
+    flex-direction: row;
+}
+
+#main {
+    background-color: rgb(179, 214, 214);
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+
+#left {
+    background-color: rgb(189, 174, 197);
+    flex-direction: row;
+    height: 100%;
+}
+
+#right {
+    background-color: rgb(199, 194, 217);
+    flex-direction: row;
+    height: 100%;
+}
+
+.left-col {
+    width: 50%;
+}
+
+.right-col {
+    width: 50%;
+}
+
+#body.narrow .left-col {
+    width: 31.25%;
+}
+
+#body.narrow .right-col {
+    width: 68.75%;
+}
+
+#footer {
+    background-color: rgb(255, 206, 105);
+    width: 100%;
+    height: 64px;
+    flex-direction: row;
+}
+
+#left-foot {
+}
+
+#right-foot {
+    flex-direction: row-reverse;
+}
+
+Button#confirm {
+    flex-direction: row-reverse;
+    -unity-text-align: middle-center;
+    margin-left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 15px;
+    width: auto;
+}
+
+.btn {
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: var(--rounded-radius);
+    border-bottom-left-radius: var(--rounded-radius);
+    border-top-right-radius: var(--rounded-radius);
+    border-bottom-right-radius: var(--rounded-radius);
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+#header-right Button {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn:focus {
+    background-color: var(--success-background);
+}
+
+.btn:active {
+    background-color: var(--success-background);
+}
+
+.to-bottom {
+    position: absolute;
+    bottom: 15px;
+}
+
+.btn-expander {
+    width: 85%;
+}
+
+.btn-expander:hover {
+    width: 90%;
+}
+
+.btn-expander:focus {
+    background-color: var(--success-background);
+    width: 100%;
+}
+
+.btn-solo {
+    margin-left: 15px;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn-primary {
+    background-color: var(--primary-background);
+    color: var(--primary-foreground);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-background);
+    color: var(--secondary-foreground);
+}
+
+.btn-disabled {
+}
+
+.btn-success {
+    background-color: var(--success-background);
+    color: var(--success-foreground);
+}
+
+.btn-danger {
+    background-color: var(--danger-background);
+    color: var(--danger-foreground);
+}
+
+.btn-warning {
+}
+
+.btn-info {
+    background-color: var(--info-background);
+    color: var(--info-foreground);
+}
+
+Button.icon {
+    flex-direction: row;
+}
+
+.icon Label {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.icon Label.fonticon {
+    -unity-font: url('project://database/Assets/Resources/Fonts/IcoMoon/IcoMoon-Free.ttf?fileID=12800000&amp;guid=6354eee6bf0944726b750c0d67349a45&amp;type=3#IcoMoon-Free');
+    flex-direction: row;
+    -unity-font-definition: resource('Fonts/FA/fa-solid-900 SDF');
+    -unity-font-style: normal;
+    font-size: 28px;
+    margin: 0;
+    white-space: normal;
+    height: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    margin-left: 5px;
+    padding-left: -5px;
+    padding-right: -5px;
+    padding-top: -5px;
+    padding-bottom: -5px;
+}
+
+DropdownField#colorselect .unity-base-dropdown__container-outer {
+    width: 200px;
+}
+
+EnumField#racer-color {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+TextField#racer-name {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+TextField#racer-name Label {
+    min-width: 75px;
+    width: 75px;
+    -unity-text-align: upper-right;
+    padding-right: 15px;
+}
+
+EnumField#racer-color Label {
+    min-width: 75px;
+    width: 75px;
+    -unity-text-align: upper-right;
+    padding-right: 15px;
+}
+
+TextField#racer-name TextInput {
+    width: 200px;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+Button.mini-btn {
+    padding: 5px;
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+.mini-btn Label {
+    font-size: 14px;
+}
+
+.mini-btn Label.fonticon {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+#stats {
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.stats-table{
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+ScrollView#stats-scroller Scroller{
+    display:none;
+    visibility:hidden;
+    width:0px;
+    overflow:hidden;
+}
+
+.stats-table .stat-label{
+    -unity-text-align: middle-right;
+    width:70%;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:0;
+}
+.stats-table .stat-value{
+    -unity-text-align: middle-center;
+    width:25%;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:0;
+}
+
+.stats-table Label{
+    margin-top:1%;
+}
+
+
+.col-2{
+
+}
+
+.col-2 .col{
+    width:50%;
+}
+
+.pull-right{
+    position: absolute; 
+    right: 15px; 
+}
+.pull-right-0{
+    position: absolute; 
+    right: 0px; 
+}
+Button.mini-btn .pull-right{
+    position: absolute; 
+    top: 11px; 
+    right: 15px; 
+    font-size: 18px;
+}
+

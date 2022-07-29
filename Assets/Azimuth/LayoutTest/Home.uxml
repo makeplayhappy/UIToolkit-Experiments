@@ -1,0 +1,62 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/LayoutTest/LayoutTest.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#LayoutTest" />
+    <ui:VisualElement name="body" class="narrow">
+        <ui:VisualElement name="header">
+            <ui:VisualElement name="header-left" class="left-col">
+                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="quit" class="btn-danger btn btn-solo icon">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Quit" display-tooltip-when-elided="true" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement name="header-right" class="right-col" style="flex-direction: row-reverse;">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="coins" class="btn-info btn icon">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
+                </ui:Button>
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="coins" class="btn-secondary btn icon">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" name="number-coins" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="main">
+            <ui:VisualElement name="right" class="right-col" style="flex-direction: column;">
+                <ui:VisualElement name="new-racer-menu" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: none;">
+                    <ui:Label tabindex="-1" text="Generate a fresh racer" display-tooltip-when-elided="true" class="h1" />
+                    <ui:VisualElement name="container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 50%; margin-left: auto; margin-right: auto; margin-top: 25px; align-items: flex-end;">
+                        <ui:TextField picking-mode="Ignore" label="Name" name="racer-name" style="margin-left: 0; margin-right: 0;" />
+                        <ui:EnumField label="Color" type="raceColors, Assembly-CSharp" name="racer-color" style="margin-left: 0; margin-right: 0;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="resume-menu" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Label tabindex="-1" text="Resume" display-tooltip-when-elided="true" class="h1" />
+                    <ui:VisualElement name="container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 70%; margin-left: auto; margin-right: auto; margin-top: 25px; align-items: flex-end;">
+                        <ui:DropdownField label="Racer" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="racer-list" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="left" class="left-col" style="flex-direction: column;">
+                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="new" class="btn-primary btn icon btn-expander">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="New Racer" display-tooltip-when-elided="true" />
+                </ui:Button>
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="resume" class="btn-primary btn icon btn-expander">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Resume" display-tooltip-when-elided="true" />
+                </ui:Button>
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="options" class="btn-primary btn btn-solo to-bottom icon btn-expander">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="footer" style="flex-direction: row;">
+            <ui:VisualElement name="left-foot" class="left-col" />
+            <ui:VisualElement name="right-foot" class="right-col" style="flex-direction: row-reverse;">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="confirm" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center;">
+                    <ui:Label tabindex="-1" text="Confirm" display-tooltip-when-elided="true" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7945b32b0daf8443e9a1b49001c44645, type: 3}
+  m_Name: TrainingList
+  m_EditorClassIdentifier: 
+  items:
+  - label: Track World
+    description: An infinite possibility of random tracks for you to train on, start
+      here
+    image: Images/placeholder_03
+    background: Images/placeholder_04
+  - label: Infinite Track Run
+    description: An infinite track that goes on and on, you never get back to the
+      start but can train drivers to all sorts of curves and hazards
+    image: Images/placeholder_01
+    background: Images/placeholder_02
+  - label: Chained to a rock
+    description: Experience unusual driving conditions by being chained to a heavy
+      rock
+    image: Images/placeholder_05
+    background: Images/placeholder_06
+  - label: Chase Wally
+    description: Score points by chasing another car and try to sabotage
+    image: Images/placeholder_07
+    background: Images/placeholder_08
+  - label: Rumble in the Jungle
+    description: 'A never ending rumble strip of jumps and rocks '
+    image: Images/placeholder_09
+    background: Images/placeholder_10

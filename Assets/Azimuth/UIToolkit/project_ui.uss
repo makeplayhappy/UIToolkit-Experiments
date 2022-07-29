@@ -1,0 +1,65 @@
+:root {
+    --primary-color: rgb(0, 181, 255);
+    --primary-color-hover: rgb(50, 221, 255);
+    --primary-color-selected: rgb(0, 100, 150);
+    --secondary-color: rgb(142, 142, 142);
+}
+
+.azimuth-button {
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    padding: 15px;
+    -unity-text-outline-width: 0;
+    border-width: 3px;
+    border-radius: 15px;
+    font-size: 26px;
+    flex-shrink: 0;
+    height: auto;
+    overflow: hidden;
+    margin: 20px;
+    -unity-font-definition: url('project://database/Assets/Fonts/Rubik/static/Rubik-SemiBold%20SDF%202.asset?fileID=11400000&guid=620c9db8009c04f55b0eceeb24923774&type=2#Rubik-SemiBold SDF 2');
+    -unity-font-style: normal;
+}
+
+.primary-bg {
+    background-color: var(--primary-color);
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.secondary-bg {
+    background-color: var(--secondary-color);
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.azimuth-button:hover {
+    background-color: var(--primary-color-hover);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
+}
+
+.primary-bg:active {
+    background-color: var(--primary-color-selected);
+}
+
+.primary-bg:focus {
+    background-color: var(--primary-color-selected);
+}
+
+.barholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    rotate: 0;
+    background-color: transparent;
+    transform-origin: left;
+    translate: 0 0;
+    scale: 1 1;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
