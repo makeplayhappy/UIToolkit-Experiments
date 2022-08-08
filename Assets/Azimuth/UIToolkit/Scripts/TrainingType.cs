@@ -156,8 +156,8 @@ namespace Azimuth
         }
 
 
-        private VisualElement MakeItem()
-        {
+        private VisualElement MakeItem() {
+            
             // Create a row to hold a label and "-" button.
             var row = new VisualElement();
             row.style.flexDirection = FlexDirection.Row;

@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="Azimuth.TrainingType" src="project://database/Assets/Azimuth/UIToolkit/UXML/Azimuth.TrainingType.uxml?fileID=9197481963319205126&amp;guid=168198f1b5c14499db2eb475052d3247&amp;type=3#Azimuth.TrainingType" />
-    <Style src="project://database/Assets/Azimuth/LayoutTest/LayoutTest.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#LayoutTest" />
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
     <ui:VisualElement name="body">
         <ui:VisualElement name="header">
             <ui:VisualElement name="header-left" class="left-col">

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
+   
+    <Azimuth.LockableListItem style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+
+        <ui:Label tabindex="-1" text="A long list line of text" display-tooltip-when-elided="true" />
+        
+        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="lockstate" class="btn-primary btn icon pull-right">
+            <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon unlocked" />
+            <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon locked" />
+        </ui:Button>
+    </Azimuth.LockableListItem>
+</ui:UXML>

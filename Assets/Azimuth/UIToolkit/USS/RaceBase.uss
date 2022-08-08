@@ -391,3 +391,12 @@ Button.mini-btn .pull-right {
     right: 15px;
     font-size: 18px;
 }
+
+.off-right{
+    transition: translate 0.4s ease-in;
+    translate: 110% 0px;
+}
+.in-right{
+    translate: 0% 0px;
+}
+

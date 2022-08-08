@@ -28,46 +28,27 @@ namespace Azimuth
             this.RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
         }
 
-        void OnGeometryChange(GeometryChangedEvent evt)
-        {
+        void OnGeometryChange(GeometryChangedEvent evt) {
             
-            Debug.Log("RacerList OnGeometryChange");
+            //Debug.Log("RacerList OnGeometryChange");
 
 
             //UIDocument ui_doc = GetComponent<UIDocument>();
             //VisualElement root = ui_doc.rootVisualElement;
             // borrowed from https://docs.unity3d.com/ScriptReference/UIElements.ListView.html
-/*
-            const int itemCount = 35;
-            var items = new List<string>(itemCount);
-            for (int i = 1; i <= itemCount; i++)
-                items.Add(i.ToString());
-*/
-            //items = new List<string>(){"Track World","Infinite Track Run","Chained to a rock","Chase Wally","Rumble in the Jungle"};
 
-            //listViewItemData = Resources.Load<RacerItemData>("Racers");
             listViewItemDataList = new List<RacerItemData>();
             listViewItemDataList.AddRange(Resources.LoadAll<RacerItemData>("Racers"));
             
-            
-
-            //Func<VisualElement> makeItem = () => new Label();
-            //Action<VisualElement, int> bindItem = (e, i) => (e as Label).text = items[i];
-
             if( listViewItemDataList != null ){
 
                 listView = this.Q<ListView>();
 
                 infoPanel = this.Q<RacerInfo>();
 
-/*
-                selectionDetails = this.Q<VisualElement>("selection-details");
-                trainingImage = this.Q<VisualElement>("training-image");
-                trainingName = this.Q<Label>("training-name");
-                trainingDescription = this.Q<Label>("training-description");
+            //    infoPanel.AddToClassList("off-right");
 
-                Debug.Log(listView);
-*/
+
                 listView.makeItem = MakeItem;//makeItem;
                 listView.bindItem = BindItem;//bindItem;
                 listView.itemsSource = listViewItemDataList;
@@ -75,10 +56,6 @@ namespace Azimuth
                 for(int i = 0; i < listViewItemDataList.Count; i++){
                     Debug.Log( "Racers count:" + i + ": " + listViewItemDataList[i].name );
                 }
-
-                //Debug.Log( "Setting List view source:" );
-
-                //listView.selectionType = SelectionType.Multiple;
 
                 // Callback invoked when the user double clicks an item
                 listView.onItemsChosen += Debug.Log;
@@ -88,46 +65,21 @@ namespace Azimuth
                 listView.style.flexGrow = 1.0f;
             }
 
-            /*
-            musicToggle = this.Q<Toggle>("music-toggle");
-            bool muteMusic = PlayerPrefs.GetInt(PlayerPrefsMuteMusicKey, 0) == 0;
-            musicToggle?.SetValueWithoutNotify(!muteMusic);
-            SetMuteMusic(muteMusic);
-            musicToggle?.RegisterValueChangedCallback(e => OnMusicToggle(e));
-
-            speedSlider = this.Q<SliderInt>("speed-slider");
-            speedValue = this.Q<Label>("speed-value-label");
-            int timeScale = (int)Mathf.Round(Time.timeScale);
-
-            // Capping (only matters in the Editor where the time scale can be changed on the project properties
-            // but we're being safe).
-            if (timeScale > 3)
-                timeScale = 3;
-            else if (timeScale < 1)
-                timeScale = 1;
-
-            if (speedValue != null)
-            {
-                speedValue.text = timeScale.ToString();
-                speedSlider.value = timeScale;
-                speedSlider.RegisterValueChangedCallback(e => OnSpeedSliderChanged(e.newValue));
-            }*/
-
             this.UnregisterCallback<GeometryChangedEvent>(OnGeometryChange);
         }
 
         private void ItemSelected( IEnumerable<object> selectedItems){
             
 
-            Debug.Log("RacerList Root " + this.Q<VisualElement>().name);
+            //Debug.Log("RacerList Root " + this.Q<VisualElement>().name);
 
             foreach(RacerItemData itemData in selectedItems){
-                Debug.Log("Racer Selected " + itemData.name);
+                //Debug.Log("Racer Selected " + itemData.name);
                 infoPanel.SetRacer(itemData);
 
-               // trainingName.text = itemData.name;
-               // trainingDescription.text = itemData.description;
-               // selectionDetails.style.backgroundImage = new StyleBackground( Resources.Load<Texture2D>(itemData.background) );
+                infoPanel.style.translate = new Translate(0, 0);
+
+                //"in-right"
 
 
             }
@@ -145,36 +97,14 @@ namespace Azimuth
             RacerItemData itemData = listViewItemDataList[index];
             label.text = itemData.name;
 
-            Debug.Log("RacerList BindItem " + index + " " + itemData.name);
+            //Debug.Log("RacerList BindItem " + index + " " + itemData.name);
             
-            // Assign the array index to the user data of the "-" button.
-            /*
-            var button = element.Q<Button>();
-            if (button != null)
-            {
-                button.userData = index;
-            }
-     
-            // Find the first bindable element.
-            var field = element as IBindable;
-            if (field == null)
-            {
-                field = (IBindable)element.Query()
-                    .Where(x => x is IBindable)
-                    .First();
-            }
-     
-            // Bind the list view source element to the visual element.
-            var itemProp = (SerializedProperty)m_ItemListView.itemsSource[index];
-            field.bindingPath = itemProp.propertyPath;
-            element.Bind(itemProp.serializedObject);*/
         }
 
 
-        private VisualElement MakeItem()
-        {
+        private VisualElement MakeItem() {
             // Create a row to hold a label and "-" button.
-            Debug.Log("RacerList Make Item ");
+           // Debug.Log("RacerList Make Item ");
 
             var row = new VisualElement();
             row.style.flexDirection = FlexDirection.Row;
