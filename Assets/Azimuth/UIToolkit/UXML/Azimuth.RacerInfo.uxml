@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/LayoutTest/LayoutTest.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#LayoutTest" />
+    <Azimuth.RacerInfo name="wrapper" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;" class="col-2">
+        <ui:VisualElement name="left" class="col" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column;">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="data-name" class="h2" />
+            <ui:VisualElement name="racer-visual-target" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0.5);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="right" class="col" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column;">
+            <ui:VisualElement name="racer-stats" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column;">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="achievements" class="btn-secondary btn icon mini-btn">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Achievements" display-tooltip-when-elided="true" />
+                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" name="num" class="pull-right" />
+                </ui:Button>
+                <ui:ScrollView name="stats-scroller" touch-scroll-type="Elastic" scroll-deceleration-rate="0.18" elasticity="0.04">
+                    <ui:VisualElement name="stats-holder" class="stats-table" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ui:Label tabindex="-1" text="Hours Trained" display-tooltip-when-elided="true" class="stat-label" />
+                        <ui:Label tabindex="-1" text="0.3" display-tooltip-when-elided="true" name="data-hoursTrained" class="stat-value" />
+                        <ui:Label tabindex="-1" text="Top Speed" display-tooltip-when-elided="true" class="stat-label" />
+                        <ui:Label tabindex="-1" text="123" display-tooltip-when-elided="true" name="data-topSpeed" class="stat-value" />
+                        <ui:Label tabindex="-1" text="Races Entered" display-tooltip-when-elided="true" class="stat-label" />
+                        <ui:Label tabindex="-1" text="15" display-tooltip-when-elided="true" name="data-racesEntered" class="stat-value" />
+                        <ui:Label tabindex="-1" text="Races Completed" display-tooltip-when-elided="true" class="stat-label" />
+                        <ui:Label tabindex="-1" text="1" display-tooltip-when-elided="true" name="data-racesCompleted" class="stat-value" />
+                        <ui:Label tabindex="-1" text="Best Placing" display-tooltip-when-elided="true" class="stat-label" />
+                        <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" name="data-bestPlacing" class="stat-value" />
+                        <ui:Label tabindex="-1" text="Global Rank" display-tooltip-when-elided="true" class="stat-label" />
+                        <ui:Label tabindex="-1" text="1896" display-tooltip-when-elided="true" name="data-rank" class="stat-value" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </Azimuth.RacerInfo>
+</ui:UXML>

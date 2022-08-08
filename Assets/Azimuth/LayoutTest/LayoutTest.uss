@@ -12,7 +12,6 @@
     --warning-foreground: rgb(0, 0, 0);
     --danger-background: rgb(220, 53, 69);
     --danger-foreground: rgb(255, 255, 255);
-    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
     -unity-font: resource('Fonts/Rubik/static/Rubik-Regular');
 }
 
@@ -86,6 +85,10 @@
     background-color: rgb(199, 194, 217);
     flex-direction: row;
     height: 100%;
+}
+
+#right .h1{
+    -unity-text-align: middle-center;
 }
 
 .left-col {
@@ -237,10 +240,10 @@ Button.icon {
 }
 
 .icon Label.fonticon {
-    -unity-font: url('project://database/Assets/Resources/Fonts/IcoMoon/IcoMoon-Free.ttf?fileID=12800000&amp;guid=6354eee6bf0944726b750c0d67349a45&amp;type=3#IcoMoon-Free');
-    flex-direction: row;
+    -unity-font: resource('Fonts/FA/fa-solid-900');
     -unity-font-definition: resource('Fonts/FA/fa-solid-900 SDF');
     -unity-font-style: normal;
+    flex-direction: row;
     font-size: 28px;
     margin: 0;
     white-space: normal;
@@ -331,60 +334,60 @@ Button.mini-btn {
     margin-bottom: 0;
 }
 
-.stats-table{
-    flex-direction: row; 
-    flex-wrap: wrap; 
+.stats-table {
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     margin-top: 10px;
 }
 
-ScrollView#stats-scroller Scroller{
-    display:none;
-    visibility:hidden;
-    width:0px;
-    overflow:hidden;
+ScrollView#stats-scroller Scroller {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    overflow: hidden;
 }
 
-.stats-table .stat-label{
+.stats-table .stat-label {
     -unity-text-align: middle-right;
-    width:70%;
-    margin-left:0;
-    margin-right:0;
-    margin-bottom:0;
+    width: 70%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
-.stats-table .stat-value{
+
+.stats-table .stat-value {
     -unity-text-align: middle-center;
-    width:25%;
-    margin-left:0;
-    margin-right:0;
-    margin-bottom:0;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
-.stats-table Label{
-    margin-top:1%;
+.stats-table Label {
+    margin-top: 1%;
 }
 
-
-.col-2{
-
+.col-2 {
 }
 
-.col-2 .col{
-    width:50%;
+.col-2 .col {
+    width: 50%;
 }
 
-.pull-right{
-    position: absolute; 
-    right: 15px; 
+.pull-right {
+    position: absolute;
+    right: 15px;
 }
-.pull-right-0{
-    position: absolute; 
-    right: 0px; 
+
+.pull-right-0 {
+    position: absolute;
+    right: 0;
 }
-Button.mini-btn .pull-right{
-    position: absolute; 
-    top: 11px; 
-    right: 15px; 
+
+Button.mini-btn .pull-right {
+    position: absolute;
+    top: 11px;
+    right: 15px;
     font-size: 18px;
 }
-

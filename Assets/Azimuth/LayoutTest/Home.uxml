@@ -1,4 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Azimuth.RacerList" src="project://database/Assets/Azimuth/UIToolkit/UXML/Azimuth.RacerList.uxml?fileID=9197481963319205126&amp;guid=9b8b75a910a3e4bc9b83842c5fe9e456&amp;type=3#Azimuth.RacerList" />
+    <ui:Template name="Azimuth.RacerInfo" src="project://database/Assets/Azimuth/UIToolkit/UXML/Azimuth.RacerInfo.uxml?fileID=9197481963319205126&amp;guid=925f610160c634bbaae9f32dcebdc6fa&amp;type=3#Azimuth.RacerInfo" />
     <Style src="project://database/Assets/Azimuth/LayoutTest/LayoutTest.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#LayoutTest" />
     <ui:VisualElement name="body" class="narrow">
         <ui:VisualElement name="header">
@@ -28,12 +30,8 @@
                         <ui:EnumField label="Color" type="raceColors, Assembly-CSharp" name="racer-color" style="margin-left: 0; margin-right: 0;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="resume-menu" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="Resume" display-tooltip-when-elided="true" class="h1" />
-                    <ui:VisualElement name="container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 70%; margin-left: auto; margin-right: auto; margin-top: 25px; align-items: flex-end;">
-                        <ui:DropdownField label="Racer" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="racer-list" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
+                <ui:Instance template="Azimuth.RacerList" name="Azimuth.RacerList" />
+                
             </ui:VisualElement>
             <ui:VisualElement name="left" class="left-col" style="flex-direction: column;">
                 <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="new" class="btn-primary btn icon btn-expander">
