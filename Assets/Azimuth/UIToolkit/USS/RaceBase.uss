@@ -12,6 +12,12 @@
     --warning-foreground: rgb(0, 0, 0);
     --danger-background: rgb(220, 53, 69);
     --danger-foreground: rgb(255, 255, 255);
+    --darkbackground-foreground: rgb(255, 255, 255);
+    --darkbackground-tint: rgb(200, 200, 200);
+
+    --disabled-background: rgb(100, 100, 100);
+    --disabled-foreground: rgb(200, 200, 200);
+
     -unity-font: resource('Fonts/Rubik/static/Rubik-Regular');
 }
 
@@ -51,6 +57,16 @@
 
 .h4 {
     font-size: 120%;
+}
+
+.small, Label.small, 
+.icon Label.small{
+    font-size: 85%;
+}
+
+.tiny, Label.tiny, 
+.icon Label.tiny{
+    font-size: 70%;
 }
 
 #body {
@@ -190,6 +206,8 @@ Button#confirm {
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
+    -unity-text-align: middle-center; 
+    flex-direction: row;
 }
 
 .btn-primary {
@@ -221,6 +239,13 @@ Button#confirm {
 .btn-info {
     background-color: var(--info-background);
     color: var(--info-foreground);
+}
+.dark-background-text{
+    color: var(--darkbackground-foreground);
+}
+
+.dark-background{
+    -unity-background-image-tint-color: var(--darkbackground-tint);
 }
 
 Button.icon {
@@ -309,16 +334,13 @@ Button.mini-btn {
     padding: 5px;
     margin-left: 0;
     margin-top: 0;
-    width: 100%;
-}
 
-.mini-btn Label {
-    font-size: 14px;
 }
 
 .mini-btn Label.fonticon {
     font-size: 15px;
-    margin-right: 5px;
+    margin-left:0;
+    margin-right:0;
 }
 
 #stats {
@@ -398,5 +420,49 @@ Button.mini-btn .pull-right {
 }
 .in-right{
     translate: 0% 0px;
+}
+
+#achievements Label#text-label{
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+#left #achievements Label#text-label{
+    font-size: 15px;
+    margin-right:30px;
+    
+}
+
+LockableListItem, LockableListItem Button{
+    height:100%;
+}
+
+LockableListItem Label#list-text{
+    width:80%;
+}
+
+LockableListItem Button#lockstate{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.unlocked{
+    display:flex;
+}
+.locked{
+    display:none;
+}
+:disabled .locked{
+    display: flex;
+}
+:disabled Button{
+    background-color: var(--disabled-background);
+    color: var(--disabled-foreground);
+}
+
+:disabled .unlocked{
+    display: none;
 }
 

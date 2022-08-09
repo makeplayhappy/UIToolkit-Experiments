@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
+    <Azimuth.TrainingType name="training-selection" style="flex-grow: 1; width: 100%; height: 100%;">
+        <ui:VisualElement name="wrapper" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
+            <ui:ListView focusable="true" show-border="false" fixed-item-height="50" name="training-type" style="width: 100%; height: auto; min-height: 200px; max-height: 500px; display: flex;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="selection-details" class="col-2 dark-background" style="flex-wrap: nowrap; background-color: rgb(255, 255, 255); width: 100%; flex-direction: row; align-items: flex-start; height: 40%; position: relative; bottom: 0; min-height: 150px; background-image: resource(&apos;Images/placeholder-image&apos;); -unity-background-scale-mode: scale-and-crop; transform-origin: center; -unity-slice-right: 0; -unity-slice-top: 0;">
+            <ui:VisualElement class="col dark-background-text" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-wrap: nowrap; flex-direction: column; align-items: flex-start; justify-content: flex-end; align-self: flex-start; padding-left: 10px; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                <ui:VisualElement name="training-image" class="col dark-background" style="width: 45%; height: 90%; background-image: resource(&apos;Images/placeholder-image&apos;); position: absolute; right: 2.5%; top: auto; bottom: 5%; -unity-background-scale-mode: scale-and-crop;" />
+                <ui:Label tabindex="-1" text="Training Name" display-tooltip-when-elided="true" name="training-name" class="h3" style="white-space: normal; align-self: auto; align-items: flex-start; width: 100%; margin-left: 0; margin-top: 10px;" />
+                <ui:Label tabindex="-1" text="Details all about what this is, possibly spanning three lines of maybe even four" display-tooltip-when-elided="true" name="training-description" class="small" style="white-space: normal; width: 50%; margin-left: 0; bottom: 0; flex-grow: 1; -unity-text-align: lower-left;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </Azimuth.TrainingType>
+</ui:UXML>

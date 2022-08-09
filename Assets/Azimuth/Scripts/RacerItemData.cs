@@ -16,8 +16,16 @@ public class RacerItemData : ScriptableObject
     public int racesWon;
     public int bestPlacing;
     public int rank;
-
     public List<Achievements> achievements;
+
+    public override string ToString(){
+        return name + ", " + 
+                color + ", " + 
+                hoursTrained + ", " + 
+                topSpeed + ", " + 
+                rank + ", " + achievements.ToString();
+
+    }
 
 
 }
@@ -35,6 +43,8 @@ public enum Achievements{
     OneSquashed = 500, TwoSquashed = 501, ThreeSquashed = 502, FiveSquashed = 503, TenSquashed = 504,
 
     BeatRocket = 1000, BeatBooster = 1001, BeatWeaver = 1002, 
+
+    None = 9999, 
     
 
 

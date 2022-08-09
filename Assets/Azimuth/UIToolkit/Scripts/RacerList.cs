@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityAtoms;
 
 namespace Azimuth
 {
@@ -23,8 +24,14 @@ namespace Azimuth
 
         private RacerInfo infoPanel;
 
-        public RacerList()
-        {
+        private UIActionVariable uiAction;
+
+        public RacerList() {
+            listViewItemDataList = new List<RacerItemData>();
+            listViewItemDataList.AddRange(Resources.LoadAll<RacerItemData>("Racers"));
+
+            uiAction  = Resources.Load<UIActionVariable>("Data/GlobalUIAction");
+
             this.RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
         }
 
@@ -37,8 +44,7 @@ namespace Azimuth
             //VisualElement root = ui_doc.rootVisualElement;
             // borrowed from https://docs.unity3d.com/ScriptReference/UIElements.ListView.html
 
-            listViewItemDataList = new List<RacerItemData>();
-            listViewItemDataList.AddRange(Resources.LoadAll<RacerItemData>("Racers"));
+            
             
             if( listViewItemDataList != null ){
 
@@ -52,11 +58,11 @@ namespace Azimuth
                 listView.makeItem = MakeItem;//makeItem;
                 listView.bindItem = BindItem;//bindItem;
                 listView.itemsSource = listViewItemDataList;
-
+/*
                 for(int i = 0; i < listViewItemDataList.Count; i++){
                     Debug.Log( "Racers count:" + i + ": " + listViewItemDataList[i].name );
                 }
-
+*/
                 // Callback invoked when the user double clicks an item
                 listView.onItemsChosen += Debug.Log;
                 // Callback invoked when the user changes the selection inside the ListView
@@ -76,6 +82,10 @@ namespace Azimuth
             foreach(RacerItemData itemData in selectedItems){
                 //Debug.Log("Racer Selected " + itemData.name);
                 infoPanel.SetRacer(itemData);
+
+                //send a UI Action
+                uiAction.Value = UIAction.ChooseRacer;
+
 
                 infoPanel.style.translate = new Translate(0, 0);
 

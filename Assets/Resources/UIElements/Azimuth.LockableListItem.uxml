@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; -unity-text-align: middle-left; height: 100%;">
+        <ui:Label tabindex="-1" text="A long list line of text" name="list-text" display-tooltip-when-elided="true" style="-unity-text-align: middle-left;" />
+        <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="lockstate" class="btn-primary btn btn-solo mini-btn icon">
+            <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon locked" style="width: 100%;" />
+            <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon unlocked" style="width: 100%;" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

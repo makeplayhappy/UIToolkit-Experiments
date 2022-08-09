@@ -27,6 +27,7 @@
         <xs:attribute default="2" name="int-attr" type="xs:int" use="optional" />
         <xs:attribute default="3" name="long-attr" type="xs:long" use="optional" />
         <xs:attribute default="false" name="bool-attr" type="xs:boolean" use="optional" />
+        <xs:attribute default="RGBA(1.000, 0.000, 0.000, 1.000)" name="color-attr" type="xs:string" use="optional" />
         <xs:attribute default="Bad" name="enum-attr" type="BuilderAttributesTestElement_enum-attr_Type" use="optional" />
         <xs:anyAttribute processContents="lax" />
       </xs:restriction>

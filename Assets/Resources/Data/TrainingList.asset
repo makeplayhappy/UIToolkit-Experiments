@@ -16,23 +16,38 @@ MonoBehaviour:
   - label: Track World
     description: An infinite possibility of random tracks for you to train on, start
       here
+    lockedDescription: 
     image: Images/placeholder_03
     background: Images/placeholder_04
+    achievementRequired: 9999
+    isEnabled: 1
   - label: Infinite Track Run
     description: An infinite track that goes on and on, you never get back to the
       start but can train drivers to all sorts of curves and hazards
+    lockedDescription: Unlocked after completing ten laps
     image: Images/placeholder_01
     background: Images/placeholder_02
+    achievementRequired: 101
+    isEnabled: 1
   - label: Chained to a rock
     description: Experience unusual driving conditions by being chained to a heavy
       rock
+    lockedDescription: Unlocked after your first victory
     image: Images/placeholder_05
     background: Images/placeholder_06
+    achievementRequired: 401
+    isEnabled: 0
   - label: Chase Wally
     description: Score points by chasing another car and try to sabotage
+    lockedDescription: Unlocked after your fifth victory
     image: Images/placeholder_07
     background: Images/placeholder_08
+    achievementRequired: 404
+    isEnabled: 0
   - label: Rumble in the Jungle
     description: 'A never ending rumble strip of jumps and rocks '
+    lockedDescription: Unlocked after your tenth victory
     image: Images/placeholder_09
     background: Images/placeholder_10
+    achievementRequired: 405
+    isEnabled: 0

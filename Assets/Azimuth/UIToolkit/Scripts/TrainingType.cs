@@ -14,7 +14,11 @@ namespace Azimuth
 
         private List<string> items;
 
-        private ListViewItemData listViewItemData;
+        private TrainingListData listViewItemData;
+
+        //public List<Achievements> playerAchievements;
+
+        public PlayerDataCache playerDataCache;
 
 
 
@@ -26,13 +30,32 @@ namespace Azimuth
 
         public TrainingType()
         {
+            listViewItemData = Resources.Load<TrainingListData>("Data/TrainingList");
+            playerDataCache = Resources.Load<PlayerDataCache>("Racers/PlayerDataCache");
+
+            for(int i = 0; i < listViewItemData.items.Count;i++){
+                TrainingListItem item = listViewItemData.items[i];
+
+                item.isEnabled = false;
+
+                if( item.achievementRequired == null || item.achievementRequired == Achievements.None){
+                    item.isEnabled = true;
+                }else if(playerDataCache != null && playerDataCache.racer != null && playerDataCache.racer.achievements.Contains( item.achievementRequired ) ){
+                    item.isEnabled = true;
+                }
+                listViewItemData.items[i] = item;
+
+                //Debug.Log(item);
+
+            }
+
             this.RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
         }
 
         void OnGeometryChange(GeometryChangedEvent evt)
         {
             
-            Debug.Log("TrainingTypeSelection OnGeometryChange");
+            //Debug.Log("TrainingTypeSelection OnGeometryChange");
 
             //UIDocument ui_doc = GetComponent<UIDocument>();
             //VisualElement root = ui_doc.rootVisualElement;
@@ -45,10 +68,10 @@ namespace Azimuth
 */
             //items = new List<string>(){"Track World","Infinite Track Run","Chained to a rock","Chase Wally","Rumble in the Jungle"};
 
-            listViewItemData = Resources.Load<ListViewItemData>("Data/TrainingList");
+           //listViewItemData = Resources.Load<TrainingListData>("Data/TrainingList");
             
 
-            Debug.Log( listViewItemData );
+            //Debug.Log( listViewItemData );
 
             //Func<VisualElement> makeItem = () => new Label();
             //Action<VisualElement, int> bindItem = (e, i) => (e as Label).text = items[i];
@@ -62,7 +85,7 @@ namespace Azimuth
                 trainingName = this.Q<Label>("training-name");
                 trainingDescription = this.Q<Label>("training-description");
 
-                Debug.Log(listView);
+                //Debug.Log(listView);
 
                 listView.makeItem = MakeItem;//makeItem;
                 listView.bindItem = BindItem;//bindItem;
@@ -107,15 +130,21 @@ namespace Azimuth
         }
 
         private void ItemSelected( IEnumerable<object> selectedItems){
-            foreach(ListViewItem itemData in selectedItems){
-                Debug.Log("Item Selected " + itemData.label);
+
+
+            foreach(TrainingListItem itemData in selectedItems){
+                //Debug.Log("Item Selected " + itemData.label);
+
 
                 trainingName.text = itemData.label;
-                trainingDescription.text = itemData.description;
-//portraitImage.style.backgroundImage
-// Resources.Load<Texture2D >("Data/TrainingList")
+                
+                trainingImage.style.backgroundImage = new StyleBackground( Resources.Load<Texture2D>(itemData.image) );
                 selectionDetails.style.backgroundImage = new StyleBackground( Resources.Load<Texture2D>(itemData.background) );
-
+                if( itemData.isEnabled){
+                    trainingDescription.text = itemData.description;
+                }else{
+                    trainingDescription.text = itemData.lockedDescription;
+                }
 
             }
             
@@ -127,11 +156,21 @@ namespace Azimuth
         {
             
             //(e as Label).text = items[i]
+            TrainingListItem itemData = listViewItemData.items[index];
 
-            var label = element.Q<Label>();
-            ListViewItem itemData = listViewItemData.items[index];
-            label.text = itemData.label;
+            var label = element.Q<Label>(name:"list-text");
+
+            if( label != null){
+                
+                label.text = itemData.label;
+            }
             
+            
+
+//:disabled 	The Element is set to enabled == false.
+//:enabled 	The Element is set to enabled == true.
+            element.SetEnabled( itemData.isEnabled );
+            element.pickingMode = PickingMode.Ignore;
             // Assign the array index to the user data of the "-" button.
             /*
             var button = element.Q<Button>();
@@ -157,7 +196,7 @@ namespace Azimuth
 
 
         private VisualElement MakeItem() {
-            
+        /*    
             // Create a row to hold a label and "-" button.
             var row = new VisualElement();
             row.style.flexDirection = FlexDirection.Row;
@@ -170,7 +209,7 @@ namespace Azimuth
 
             var button = new Button { text = ">", tooltip = "Remove this item from the list" };
             row.Add(button);
-     
+        */
             // Create the "-" button.
             /*
             var button = new Button { text = "-", tooltip = "Remove this item from the list" };
@@ -185,7 +224,11 @@ namespace Azimuth
             });
             row.Add(button);
             */
-     
+
+            var row = new LockableListItem();
+            row.style.flexDirection = FlexDirection.Row;
+            row.style.justifyContent = Justify.SpaceBetween;
+
             // Add the row and the item field editors to a bindable element container.
             var container = new BindableElement();
             container.Add(row);
@@ -196,22 +239,3 @@ namespace Azimuth
         }
     }
 }
-/*
-
-<EletricAzimuth.TrainingTypeSelection name="training-selection" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-    <ui:VisualElement name="wrapper" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
-        <ui:ListView focusable="true" show-border="false" fixed-item-height="44" name="training-type" style="width: 100%; height: auto; min-height: 200px; max-height: 500px; display: flex;" />
-    </ui:VisualElement>
-
-    <ui:VisualElement name="selection-details" class="col-2" style="flex-wrap: nowrap; background-color: rgb(82, 137, 133); width: 100%; flex-direction: row; align-items: flex-start; height: 40%; position: relative; bottom: 0; min-height: 150px; background-image: resource(&apos;Images/placeholder-image&apos;);">
-        
-        <ui:VisualElement class="col" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-wrap: nowrap; flex-direction: column; align-items: flex-start; justify-content: flex-end; align-self: flex-start; padding-left: 10px; padding-right: 0; padding-top: 10px; padding-bottom: 0;">
-            <ui:Label tabindex="-1" text="Training Name" display-tooltip-when-elided="true" name="training-name" class="h2" style="white-space: normal; align-self: auto; align-items: flex-start; width: 100%; margin-left: 0; margin-top: 0;" />
-            <ui:Label tabindex="-1" text="Details all about what this is, possibly spanning three lines of maybe even four" display-tooltip-when-elided="true" name="training-description" style="white-space: normal; width: 100%; margin-left: 0;" />
-        </ui:VisualElement>
-        
-        <ui:VisualElement name="training-image" class="col" style="width: 50%; height: 100%; background-image: resource(&apos;Images/placeholder-image&apos;);" />
-    </ui:VisualElement>
-</EletricAzimuth.TrainingTypeSelection>
-
-*/

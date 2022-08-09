@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8cf664ddf0d44ffa18c1402a4c1b08, type: 3}
+  m_Name: GlobalUIAction
+  m_EditorClassIdentifier: 
+  _developerDescription: Global UI Action Game State
+  _id: 
+  _value: 3
+  _changed: {fileID: 11400000, guid: 7a4bac3b64e7945dc8b1bad47ab714d6, type: 2}
+  _changedWithHistory: {fileID: 11400000, guid: 8340ce5c6f07348ea84afd56912a4c03, type: 2}
+  _triggerChangedOnOnEnable: 0
+  _triggerChangedWithHistoryOnOnEnable: 0
+  _oldValue: 3
+  _initialValue: 3
+  _preChangeTransformers: []

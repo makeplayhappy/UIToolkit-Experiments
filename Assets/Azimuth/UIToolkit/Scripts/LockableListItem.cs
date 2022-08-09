@@ -20,6 +20,12 @@ namespace Azimuth
 
         public LockableListItem() {
             this.RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
+
+            VisualTreeAsset uiAsset = Resources.Load<VisualTreeAsset>("UIElements/Azimuth.LockableListItem");
+            //Debug.Log( uiAsset );
+            TemplateContainer ui = uiAsset.CloneTree();
+            Add(ui);
+
         }
 
 

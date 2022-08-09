@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4531462415051683072
 MonoBehaviour:
@@ -64,3 +64,4 @@ MonoBehaviour:
   DestroyWhenClosed: 1
   DisableMenusUnderneath: 1
   document: {fileID: 4531462415051683072}
+  playerDataCache: {fileID: 11400000, guid: a402cb2dea5764e4089e367ab9ce5f9d, type: 2}

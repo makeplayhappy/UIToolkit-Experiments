@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="Azimuth.RacerList" src="project://database/Assets/Azimuth/UIToolkit/UXML/Azimuth.RacerList.uxml?fileID=9197481963319205126&amp;guid=9b8b75a910a3e4bc9b83842c5fe9e456&amp;type=3#Azimuth.RacerList" />
+    <ui:Template name="Azimuth.RacerList" src="project://database/Assets/Resources/UIElements/Azimuth.RacerList.uxml?fileID=9197481963319205126&amp;guid=9b8b75a910a3e4bc9b83842c5fe9e456&amp;type=3#Azimuth.RacerList" />
     <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
     <ui:VisualElement name="body" class="narrow">
         <ui:VisualElement name="header">
@@ -14,7 +14,7 @@
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
                 </ui:Button>
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="coins" class="btn-secondary btn icon">
+                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="options" class="btn-secondary btn icon">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" name="number-coins" />
                 </ui:Button>
@@ -32,7 +32,7 @@
                 <ui:Instance template="Azimuth.RacerList" name="Azimuth.RacerList" />
             </ui:VisualElement>
             <ui:VisualElement name="left" class="left-col" style="flex-direction: column;">
-                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="new" class="btn-primary btn icon btn-expander">
+                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="new-racer" class="btn-primary btn icon btn-expander">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="New Racer" display-tooltip-when-elided="true" />
                 </ui:Button>

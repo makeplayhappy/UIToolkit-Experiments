@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/slide-toggle/ExampleToggel.unity
+    path: Assets/samples/color-field/ExampleColor_and_Toggle.unity
     guid: 99ca7a3b457e948b2b07d6e309d0246f
   m_configObjects: {}
