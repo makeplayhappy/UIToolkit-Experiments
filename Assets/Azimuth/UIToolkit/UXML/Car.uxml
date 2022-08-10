@@ -15,7 +15,7 @@
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
                 </Azimuth.ActionButton>
-                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="opts" ui-action="GlobalOptions" class="btn-secondary btn icon">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="opts" ui-action="OptionsMenu" class="btn-secondary btn icon">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" name="number-coins" />
                 </Azimuth.ActionButton>

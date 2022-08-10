@@ -13,7 +13,7 @@ namespace Azimuth
             documentRoot.Q<Button>(name: "quit").clicked += () => DoUIAction(UIAction.Quit);
 
             //multiple elements need the query + foreach to assign callback
-            documentRoot.Query<Button>(name: "options").ForEach( e => e.clicked += () => DoUIAction(UIAction.GlobalOptions) ); 
+            documentRoot.Query<Button>(name: "options").ForEach( e => e.clicked += () => DoUIAction(UIAction.OptionsMenu) ); 
 
             documentRoot.Q<Button>(name: "new-racer").clicked += () => DoUIAction(UIAction.NewRacer);
             documentRoot.Q<Button>(name: "resume").clicked += () => DoUIAction(UIAction.ChooseRacer);
@@ -23,11 +23,13 @@ namespace Azimuth
 */
             //racer-list
             
-
-
-
-            
         }
+
+        public override void OnBackPressed() {
+        //PauseMenu.Show();
+            Debug.Log("HomeMenu OnBackPressed");
+        }
+
         /*
         private void DoUIAction(UIAction action){
             uiAction.Value = action;

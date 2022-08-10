@@ -17,7 +17,7 @@ public class SetupActionButtons : MonoBehaviour
     //documentRoot.Q<Button>(name: "quit").clicked += () => DoUIAction(UIAction.Quit);
 
     //multiple elements need the query + foreach to assign callback
-    //documentRoot.Query<ActionButton>(name: "options").ForEach( e => e.clicked += () => DoUIAction(UIAction.GlobalOptions) ); 
+    //documentRoot.Query<ActionButton>(name: "options").ForEach( e => e.clicked += () => DoUIAction(UIAction.OptionsMenu) ); 
         //documentRoot.Query<MyUILibrary.ActionButton>().ForEach( element => element.clicked += () => Debug.Log("action clicked") ); 
         //documentRoot.Query<MyUILibrary.ActionButton>().ForEach( element => element.RegisterCallback<PointerDownEvent>(OnPointerDown, TrickleDown.TrickleDown) );
         //documentRoot.Query<MyUILibrary.ActionButton>().ForEach( element => element.RegisterCallback<ClickEvent>(OnClick, TrickleDown.TrickleDown) );

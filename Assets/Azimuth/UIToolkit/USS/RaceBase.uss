@@ -69,36 +69,51 @@
     font-size: 70%;
 }
 
+#body.showlayout{
+    background-color: rgb(135, 111, 71);
+}
+
+#body.showlayout #header {
+    background-color: rgb(183, 212, 177);
+}
+#body.showlayout #main {
+    background-color: rgb(179, 214, 214);
+}
+#body.showlayout #left {
+    background-color: rgb(189, 174, 197);
+}
+#body.showlayout #right {
+    background-color: rgb(199, 194, 217);
+}
+#body.showlayout #footer {
+    background-color: rgb(255, 206, 105);
+}
+
 #body {
     width: 100%;
     height: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: rgb(135, 111, 71);
 }
 
 #header {
-    background-color: rgb(183, 212, 177);
     width: 100%;
     height: 64px;
     flex-direction: row;
 }
 
 #main {
-    background-color: rgb(179, 214, 214);
     width: 100%;
     height: 100%;
     flex-direction: row-reverse;
 }
 
 #left {
-    background-color: rgb(189, 174, 197);
     flex-direction: row;
     height: 100%;
 }
 
 #right {
-    background-color: rgb(199, 194, 217);
     flex-direction: row;
     height: 100%;
 }
@@ -124,7 +139,6 @@
 }
 
 #footer {
-    background-color: rgb(255, 206, 105);
     width: 100%;
     height: 64px;
     flex-direction: row;

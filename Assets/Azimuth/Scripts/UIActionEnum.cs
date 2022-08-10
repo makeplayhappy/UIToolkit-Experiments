@@ -9,7 +9,7 @@ public enum UIAction{
     RacerMenu,
     Quit,
     Back,
-    GlobalOptions,
+    OptionsMenu,
     Currency,
     PurchaseCurrency,
     NewRacer,

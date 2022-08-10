@@ -39,40 +39,38 @@ namespace Azimuth{
             transientAction = newPairState.Item1;
             if( transientAction == UIAction.Confirm ){
                 transientAction = newPairState.Item2;
-
-
             }
 
 
             switch(transientAction){
                 case UIAction.Quit:
-                    Debug.Log("UIActions Quit");
+                    //Debug.Log("UIActions Quit");
 
                 break;
                 case UIAction.Back:
-                    Debug.Log("UIActions Back");
+                    //Debug.Log("UIActions Back");
 
 
                 break;
 
                 case UIAction.RacerMenu:
-                    Debug.Log("UIActions RacerMenu");
+                    //Debug.Log("UIActions RacerMenu");
                     CarMenu.Show();
                 break;
 
                 case UIAction.MainMenu:
-                    Debug.Log("UIActions MainMenu");
+                    //Debug.Log("UIActions MainMenu");
                     HomeMenu.Show();
                     //ExShopMenu.Show();
 
                 break;
 
-                case UIAction.ChooseRacer:
-                    Debug.Log("UIActions ChooseRacer");
-                    //ExGameOverMenu.Show();
+                case UIAction.OptionsMenu:
+                    Debug.Log("OptionsMenu Show" + transientAction);
+                    OptionsMenu.Show();
                 break;
                 default:
-                    Debug.Log("Unknown " + transientAction);
+                   // Debug.Log("Unknown " + transientAction);
                 break;
 
         

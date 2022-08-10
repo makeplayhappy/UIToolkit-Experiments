@@ -1,0 +1,65 @@
+:root {
+    --rounded-radius: 8px;
+    --modal-background: rgb(13, 110, 253);
+    --modal-foreground: rgb(13, 110, 253);
+    --overlay-background: rgba(0, 0, 0, 0.33);
+}
+
+#body.modal {
+    background-color: var(--overlay-background);
+}
+
+#body.modal #modal {
+    width: 70%; 
+    flex-shrink: 1; 
+    flex-wrap: nowrap; 
+    margin-left: auto; 
+    margin-right: auto;
+
+    background-color: rgb(208, 211, 211);
+    color: rgb(96, 96, 96);
+    border-top-left-radius: var(--rounded-radius);
+    border-bottom-left-radius: var(--rounded-radius);
+    border-top-right-radius: var(--rounded-radius);
+    border-bottom-right-radius: var(--rounded-radius);
+    padding: 35px;
+}
+
+#body.modal #modal ActionButton#back{
+    margin-left: 0; 
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+Label#title{
+    -unity-text-align: upper-center; 
+    margin-top: 0px; 
+    margin-bottom: 60px; 
+    
+    border-bottom-width: 2px; 
+    border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+#body.modal Slider {
+    height: 44px;
+}
+
+#body.modal Slider Label {
+    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
+    font-size: 160%;
+    -unity-text-align: middle-left;
+}
+
+#body.modal Slider #unity-dragger {
+    width: 44px;
+    height: 44px;
+    margin-top: 0;
+    top: 0;
+    border-radius: 22px;
+}
+
+#body.modal Slider #unity-tracker {
+    height: 10px;
+    margin-top: -5px;
+    border-radius: 5px;
+}

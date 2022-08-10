@@ -41,11 +41,14 @@ namespace Azimuth {
             //Debug.Log( evt.eventTypeId );
             if (evt.eventTypeId == ClickEvent.TypeId()){// PointerDownEvent.TypeId()){
                 if( uiActionVar != null){
-                    Debug.Log("Setting to " + this.uiAction);
+                    //Debug.Log("Setting to " + this.uiAction);
                     uiActionVar.Value = this.uiAction;
-                }else{
+                }
+#if UNITY_EDITOR            
+                else{
                     Debug.Log("UI Var not set");
                 }
+#endif
                 //Debug.Log("ExecuteDefaultActionAtTarget ClickEvent " + this.uiAction);
             }
 

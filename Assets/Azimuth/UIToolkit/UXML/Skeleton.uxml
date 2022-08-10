@@ -3,37 +3,37 @@
     <ui:VisualElement name="body" class="narrow">
         <ui:VisualElement name="header">
             <ui:VisualElement name="header-left" class="left-col">
-                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="back" class="btn btn-solo icon btn-secondary">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="back" ui-action="Welcome" class="btn btn-solo icon btn-secondary">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Quit" display-tooltip-when-elided="true" />
-                </ui:Button>
+                </Azimuth.ActionButton>
             </ui:VisualElement>
             <ui:VisualElement name="header-right" class="right-col" style="flex-direction: row-reverse;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="coins" class="btn-info btn icon">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="Welcome" class="btn-info btn icon">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
-                </ui:Button>
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="coins" class="btn-secondary btn icon">
+                </Azimuth.ActionButton>
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="Welcome" class="btn-secondary btn icon">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" name="number-coins" />
-                </ui:Button>
+                </Azimuth.ActionButton>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="main">
             <ui:VisualElement name="right" class="right-col" style="flex-direction: column;" />
             <ui:VisualElement name="left" class="left-col" style="flex-direction: column;">
-                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="new" class="btn-primary btn icon btn-expander">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="new" ui-action="Welcome" class="btn-primary btn icon btn-expander">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="New Racer" display-tooltip-when-elided="true" />
-                </ui:Button>
+                </Azimuth.ActionButton>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="footer" style="flex-direction: row;">
             <ui:VisualElement name="left-foot" class="left-col" />
             <ui:VisualElement name="right-foot" class="right-col" style="flex-direction: row-reverse;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="confirm" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center;">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="confirm" ui-action="Welcome" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center;">
                     <ui:Label tabindex="-1" text="Confirm" display-tooltip-when-elided="true" />
-                </ui:Button>
+                </Azimuth.ActionButton>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

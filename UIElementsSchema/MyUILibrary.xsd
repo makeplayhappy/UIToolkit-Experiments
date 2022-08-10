@@ -12,7 +12,7 @@
       <xs:enumeration value="RacerMenu" />
       <xs:enumeration value="Quit" />
       <xs:enumeration value="Back" />
-      <xs:enumeration value="GlobalOptions" />
+      <xs:enumeration value="OptionsMenu" />
       <xs:enumeration value="Currency" />
       <xs:enumeration value="PurchaseCurrency" />
       <xs:enumeration value="NewRacer" />
