@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/Modal.uss?fileID=7433441132597879392&amp;guid=e71f64ca5b10c4b429032c90038fda7a&amp;type=3#Modal" />
+    <ui:VisualElement name="body" class="options modal">
+        <ui:VisualElement name="main">
+            <ui:VisualElement name="modal">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="back" ui-action="Back" class="btn btn-solo icon btn-secondary">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Back" display-tooltip-when-elided="true" />
+                </Azimuth.ActionButton>
+                <ui:Label tabindex="-1" text="&#10;" display-tooltip-when-elided="true" name="title" class="h1" style="flex-direction: row;">
+                    <ui:Label tabindex="-1" text="Coins:" display-tooltip-when-elided="true" style="margin-left: auto;" />
+                    <ui:Label tabindex="-1" text="12" display-tooltip-when-elided="true" style="margin-right: auto;" />
+                </ui:Label>
+                <ui:VisualElement name="wrapper" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+                    <ui:VisualElement name="tier" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ui:Label tabindex="-1" text="Buy 50" display-tooltip-when-elided="true" name="tier" class="h4" style="-unity-text-align: upper-center;" />
+                        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/placeholder_01&apos;);" />
+                        <ui:Button tabindex="-1" text="Purchase" display-tooltip-when-elided="true" name="purchase" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tier" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ui:Label tabindex="-1" text="Buy 75" display-tooltip-when-elided="true" name="tier" class="h4" style="-unity-text-align: upper-center;" />
+                        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/placeholder_02&apos;);" />
+                        <ui:Button tabindex="-1" text="Purchase" display-tooltip-when-elided="true" name="purchase" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tier" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ui:Label tabindex="-1" text="Buy 100" display-tooltip-when-elided="true" name="tier" class="h4" style="-unity-text-align: upper-center;" />
+                        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/placeholder_03&apos;);" />
+                        <ui:Button tabindex="-1" text="Purchase" display-tooltip-when-elided="true" name="purchase" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="footer" style="flex-direction: row;">
+            <ui:VisualElement name="left-foot" class="left-col" />
+            <ui:VisualElement name="right-foot" class="right-col" style="flex-direction: row-reverse;">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="confirm" ui-action="Welcome" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center; display: none;">
+                    <ui:Label tabindex="-1" text="Confirm" display-tooltip-when-elided="true" />
+                </Azimuth.ActionButton>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

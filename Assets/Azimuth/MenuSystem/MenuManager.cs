@@ -4,7 +4,7 @@
 /// Updated by SionDarksideJ - Fixed implementation as it assumed GO's we automatically assigned to instances
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -110,6 +110,51 @@ namespace Azimuth
             menuStack.Push(menuInstance);
         }
 
+        // there is probably a better way to do this --- I can't think of one, we do have to run through the sortOrders 
+        // possibly triggering Show on the menu might be more consisitent
+        public void ShowPreviousMenu(){
+            //get current sort order
+
+            var currentMenu = menuStack.Peek();
+            var currentDocument  = currentMenu.document;
+            float currentSortingOrder = currentDocument.sortingOrder;
+
+            float previousSortOrder = -1f;
+            Menu prevMenu = currentMenu;
+
+            foreach (var menu in menuStack){
+                if( menu.document.sortingOrder < currentSortingOrder && menu.document.sortingOrder > previousSortOrder){
+                    previousSortOrder = menu.document.sortingOrder;
+                    prevMenu = menu;
+                }
+                
+            }
+
+
+            if( previousSortOrder > -1){
+                menuStack.Peek().SetActive(false);
+                prevMenu.document.sortingOrder = currentSortingOrder + 1;
+                prevMenu.SetActive(true);
+                menuStack.Push(prevMenu);
+/*
+                foreach (var menu in menuStack){
+                    if( menu.document.sortingOrder == previousSortOrder){
+                        menuStack.Push(menu);
+                    }
+                }
+*/
+
+
+                /*
+                currentDocument.SetActive(false);
+                var prevMenu = menuStack[]
+                menuStack.Push(menuInstance);
+
+                return defaultMenu;*/
+            }
+
+        }
+
         private GameObject GetPrefab(string PrefabName)
         {
             for (int i = 0; i < MenuScreens.Length; i++)
@@ -173,6 +218,8 @@ namespace Azimuth
                     break;
             }
         }
+
+
         
 #if UNITY_IOS
 

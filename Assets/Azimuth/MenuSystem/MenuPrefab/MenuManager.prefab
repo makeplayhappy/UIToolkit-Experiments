@@ -50,6 +50,8 @@ MonoBehaviour:
   - {fileID: 5829891351705131705, guid: 9268829f30ceb40be9c5e06778af03c6, type: 3}
   - {fileID: 4531462415051683074, guid: b93128291ab104e01bef9827a0224442, type: 3}
   - {fileID: 2452420801448725766, guid: 7f30b96ba8ef6404f9f48532510a1733, type: 3}
+  - {fileID: 7963629438455163644, guid: afd9cbd3809454c4f80e0b9358f832f9, type: 3}
+  - {fileID: 1896594213943723080, guid: 895e17aab69a545a1aa7c5a28128ebcc, type: 3}
   startScreen: 0
 --- !u!114 &1907837361
 MonoBehaviour:

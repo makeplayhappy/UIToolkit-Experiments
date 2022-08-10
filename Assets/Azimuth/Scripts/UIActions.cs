@@ -49,6 +49,9 @@ namespace Azimuth{
                 break;
                 case UIAction.Back:
                     //Debug.Log("UIActions Back");
+                    //get this menus sort order
+                    MenuManager.Instance.ShowPreviousMenu(); // GetPreviousMenu()
+                    //lastMenu.Show();
 
 
                 break;
@@ -64,6 +67,24 @@ namespace Azimuth{
                     //ExShopMenu.Show();
 
                 break;
+
+                case UIAction.ShowAchievements:
+                    //Debug.Log("UIActions MainMenu");
+                    AchievementsMenu.Show();
+                    //ExShopMenu.Show();
+
+                break;
+
+                case UIAction.Currency:
+                    //Debug.Log("UIActions MainMenu");
+                    CurrencyMenu.Show();
+                    //ExShopMenu.Show();
+
+                break;
+
+                
+
+                
 
                 case UIAction.OptionsMenu:
                     Debug.Log("OptionsMenu Show" + transientAction);
