@@ -7,11 +7,11 @@
         </ui:VisualElement>
         <ui:VisualElement name="right" class="col" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column;">
             <ui:VisualElement name="racer-stats" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="achievements" class="btn-secondary btn icon mini-btn" style="width: 100%;">
-                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon small" style="margin-left:5px;" />
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="achievements" ui-action="ShowAchievements" class="btn-secondary btn icon mini-btn" style="width: 100%;">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon small" style="margin-left: 5px;" />
                     <ui:Label tabindex="-1" text="Achievements" display-tooltip-when-elided="true" name="text-label" />
                     <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" name="num" class="pull-right small" />
-                </ui:Button>
+                </Azimuth.ActionButton>
                 <ui:ScrollView name="stats-scroller" touch-scroll-type="Elastic" scroll-deceleration-rate="0.18" elasticity="0.04">
                     <ui:VisualElement name="stats-holder" class="stats-table" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
                         <ui:Label tabindex="-1" text="Hours Trained" display-tooltip-when-elided="true" class="stat-label" />

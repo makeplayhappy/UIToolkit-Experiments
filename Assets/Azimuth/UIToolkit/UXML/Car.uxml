@@ -5,20 +5,20 @@
     <ui:VisualElement name="body">
         <ui:VisualElement name="header">
             <ui:VisualElement name="header-left" class="left-col">
-                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="back" class="btn btn-solo icon btn-secondary">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="back" ui-action="MainMenu" class="btn btn-solo icon btn-secondary">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Exit" display-tooltip-when-elided="true" />
-                </ui:Button>
+                </Azimuth.ActionButton>
             </ui:VisualElement>
             <ui:VisualElement name="header-right" class="right-col" style="flex-direction: row-reverse;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="coins" class="btn-info btn icon">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="Currency" class="btn-info btn icon">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
-                </ui:Button>
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="opts" class="btn-secondary btn icon">
+                </Azimuth.ActionButton>
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="opts" ui-action="GlobalOptions" class="btn-secondary btn icon">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" name="number-coins" />
-                </ui:Button>
+                </Azimuth.ActionButton>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="main">
@@ -26,18 +26,18 @@
                 <ui:Instance template="Azimuth.TrainingType" name="Azimuth.TrainingType" style="display: flex;" />
             </ui:VisualElement>
             <ui:VisualElement name="left" class="left-col" style="flex-direction: column;">
-                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="training" class="btn-primary btn icon btn-expander">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="training" ui-action="ChooseTraining" class="btn-primary btn icon btn-expander">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Training" display-tooltip-when-elided="true" />
-                </ui:Button>
-                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="race" class="btn-primary btn icon btn-expander">
+                </Azimuth.ActionButton>
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="race" ui-action="EnterRace" class="btn-primary btn icon btn-expander">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Enter Race" display-tooltip-when-elided="true" />
-                </ui:Button>
-                <ui:Button tabindex="-1" text=" " display-tooltip-when-elided="true" name="customise" class="btn-primary btn icon btn-expander">
+                </Azimuth.ActionButton>
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="customise" ui-action="Customise" class="btn-primary btn icon btn-expander">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="Customise" display-tooltip-when-elided="true" />
-                </ui:Button>
+                </Azimuth.ActionButton>
                 <ui:VisualElement name="stats" style="flex-direction: row; display: flex;">
                     <ui:Instance template="Azimuth.RacerInfo" name="Azimuth.RacerInfo" />
                 </ui:VisualElement>
@@ -46,9 +46,9 @@
         <ui:VisualElement name="footer" style="flex-direction: row;">
             <ui:VisualElement name="left-foot" class="left-col" />
             <ui:VisualElement name="right-foot" class="right-col" style="flex-direction: row-reverse;">
-                <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="confirm" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center;">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="confirm" ui-action="Confirm" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center;">
                     <ui:Label tabindex="-1" text="Confirm" display-tooltip-when-elided="true" />
-                </ui:Button>
+                </Azimuth.ActionButton>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

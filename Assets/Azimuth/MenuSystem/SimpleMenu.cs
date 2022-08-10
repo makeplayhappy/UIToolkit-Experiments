@@ -3,6 +3,7 @@
 /// Updated by SimonDarksideJ - Refactored to be a more generic component
 using UnityAtoms;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Azimuth
 {
@@ -15,14 +16,26 @@ namespace Azimuth
         [SerializeField]
     //private GameStateVariable GlobalGameState;
         protected UIActionVariable uiAction;
+
+        protected override void Awake() {
+            base.Awake();
+            SetupUIActions();
+        }
+
+
+        public void SetupUIActions(){
+            if( uiAction != null){
+                Debug.Log("Simple Menu setup UI ActionButton");
+                documentRoot.Query<Azimuth.ActionButton>().ForEach( element => { if(element.uiActionVar == null ){element.uiActionVar = uiAction;}  } );
+            }
+        }
         
-        public static void Show()
-        {
+        public static void Show(){
+            //SetupUIActions();
             Open();
         }
 
-        public static void Hide()
-        {
+        public static void Hide(){
             Close();
         }
     }

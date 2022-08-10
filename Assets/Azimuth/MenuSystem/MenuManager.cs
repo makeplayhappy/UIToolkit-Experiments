@@ -69,6 +69,12 @@ namespace Azimuth
             menuInstance = Instantiate(prefab, transform);
         }
 
+        // alternative definition version
+        //public void CreateInstance<T>() where T : Menu {
+        //    var prefab = GetPrefab<T>();
+        //    Instantiate(prefab, transform);
+        //}
+
         public void OpenMenu(Menu menuInstance)
         {
             // De-activate top menu
@@ -78,7 +84,7 @@ namespace Azimuth
                 {
                     foreach (var menu in menuStack)
                     {
-                        menu.gameObject.SetActive(false);
+                        menu.SetActive(false);
 
                         if (menu.DisableMenusUnderneath)
                             break;
@@ -116,6 +122,21 @@ namespace Azimuth
             throw new MissingReferenceException("Prefab not found for " + PrefabName);
         }
 
+        // alternative prefab definitions
+        //private T GetPrefab<T>() where T : Menu {
+        //    // Get prefab dynamically, based on public fields set from Unity
+        //    // You can use private fields with SerializeField attribute too
+        //    var fields = this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+        //    foreach (var field in fields) {
+        //        var prefab = field.GetValue(this) as T;
+        //        if (prefab != null) {
+        //            return prefab;
+        //        }
+        //    }
+        //
+        //    throw new MissingReferenceException("Prefab not found for type " + typeof(T));
+        //}
+
         public void CloseMenu(Menu menu)
         {
             if (menuStack.Count == 0)
@@ -140,13 +161,13 @@ namespace Azimuth
             if (menuInstance.DestroyWhenClosed)
                 Destroy(menuInstance.gameObject);
             else
-                menuInstance.gameObject.SetActive(false);
+                menuInstance.SetActive(false);
 
             // Re-activate top menu
             // If a re-activated menu is an overlay we need to activate the menu under it
             foreach (var menu in menuStack)
             {
-                menu.gameObject.SetActive(true);
+                menu.SetActive(true);
 
                 if (menu.DisableMenusUnderneath)
                     break;

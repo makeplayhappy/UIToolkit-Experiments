@@ -7,6 +7,8 @@ namespace Azimuth
         protected override void Awake() {
             base.Awake();
 
+           // documentRoot.Query<Azimuth.ActionButton>().ForEach( element => element.uiActionVar = uiAction );
+/*
             // Register callbacks to trigger UI Actions (picked up by UIActions)
             documentRoot.Q<Button>(name: "quit").clicked += () => DoUIAction(UIAction.Quit);
 
@@ -18,7 +20,7 @@ namespace Azimuth
 
             documentRoot.Q<Button>(name: "achievements").clicked += () => DoUIAction(UIAction.ShowAchievements);
             documentRoot.Q<Button>(name: "coins").clicked += () => DoUIAction(UIAction.Currency);
-
+*/
             //racer-list
             
 
@@ -26,9 +28,10 @@ namespace Azimuth
 
             
         }
-
+        /*
         private void DoUIAction(UIAction action){
             uiAction.Value = action;
         }
+        */
     }
 }

@@ -34,15 +34,16 @@ namespace Azimuth
             }
             else
             {
-                Instance.gameObject.SetActive(true);
+                //Instance.gameObject.SetActive(true);
+                Instance.SetActive(true);
                 MenuManager.Instance.OpenMenu(Instance);
             }
         }
 
-///        public override void SetActive(bool value) 
-///        {
-///            Instance.documentRoot.style.display = value ? DisplayStyle.Flex : DisplayStyle.None;
-///        }
+        public override void SetActive(bool value) 
+        {
+            Instance.documentRoot.style.display = value ? DisplayStyle.Flex : DisplayStyle.None;
+        }
 
         protected static void Close()
         {
@@ -72,6 +73,6 @@ namespace Azimuth
         public UIDocument document;
 
         public abstract void OnBackPressed();
-    ///    public abstract void SetActive(bool value);
+        public abstract void SetActive(bool value);
     }
 }
