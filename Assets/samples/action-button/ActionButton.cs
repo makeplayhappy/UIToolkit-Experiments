@@ -2,42 +2,54 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections;
 using System.Collections.Generic;
+using UnityAtoms;
 
-namespace MyUILibrary
-{
+namespace MyUILibrary {
     // Derives from BaseField<bool> base class. Represents a container for its input part.
     public class ActionButton : Button {
 
-        public UIAction enumAttr { get; set; }
+        public UIAction uiAction { get; set; }
+        public UIActionVariable uiActionVar { get; set; }
 
         public new class UxmlFactory : UxmlFactory<ActionButton, UxmlTraits> { }
 
-        ///public new class UxmlTraits : BaseFieldTraits<bool, UxmlBoolAttributeDescription> { }
 
-        public new class UxmlTraits : Button.UxmlTraits
-        {
-            UxmlEnumAttributeDescription<UIAction> m_Enum = new UxmlEnumAttributeDescription<UIAction> { name = "enum-attr", defaultValue = UIAction.None };
+        public new class UxmlTraits : Button.UxmlTraits {
+            UxmlEnumAttributeDescription<UIAction> m_Action = new UxmlEnumAttributeDescription<UIAction> { name = "ui-action", defaultValue = UIAction.None };
      
-            public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription
-            {
+            public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription {
                 get { yield break; }
             }
-     
-            public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
-            {
+
+            //Here we juggle the attribute value stored in the attribute "bag" to the local property
+            public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc) {
                 base.Init(ve, bag, cc);
-                var ate = ve as ActionButton;
-     
-                ate.Clear();
-          
-                ate.enumAttr = m_Enum.GetValueFromBag(bag, cc);
-                /* -- this adds in a new EnumField into the element - we dont want this we just want to retreive the action on click
-                var en = new EnumField("Enum");
-                en.Init(m_Enum.defaultValue);
-                en.value = ate.enumAttr;
-                ate.Add(en);
-                */
+                ActionButton aButton = ve as ActionButton;
+                aButton.Clear();
+                aButton.uiAction = m_Action.GetValueFromBag(bag, cc);
+
             }
+        }
+
+        //this overrides the "default" actions - allow them to be stopped using prevent default
+        protected override void ExecuteDefaultActionAtTarget(EventBase evt) {
+            // Do not forget to call the base function.
+            base.ExecuteDefaultActionAtTarget(evt);
+            
+            // other event examples: }else if( == MouseDownEvent.TypeId() ... MouseUpEvent.TypeId() ClickEvent PointerDownEvent etc..
+            // https://docs.unity3d.com/Manual/UIE-Events-Reference.html
+
+            if (evt.eventTypeId == PointerDownEvent.TypeId()){
+                if( uiActionVar != null){
+                    Debug.Log("Prev UI Var " + uiActionVar.Value);
+                    uiActionVar.Value = this.uiAction;
+                }
+                Debug.Log("ExecuteDefaultActionAtTarget ClickEvent " + this.uiAction);
+                
+
+            }
+
+
         }
 
         

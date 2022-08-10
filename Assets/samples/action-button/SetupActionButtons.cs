@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using MyUILibrary;
+using UnityAtoms;
 public class SetupActionButtons : MonoBehaviour
 {
     public UIDocument document;
+    public UIActionVariable uiActionVar;
+
     protected VisualElement documentRoot;
     void Awake() {
         documentRoot = document.rootVisualElement;
@@ -15,9 +18,18 @@ public class SetupActionButtons : MonoBehaviour
 
     //multiple elements need the query + foreach to assign callback
     //documentRoot.Query<ActionButton>(name: "options").ForEach( e => e.clicked += () => DoUIAction(UIAction.GlobalOptions) ); 
-        documentRoot.Query<MyUILibrary.ActionButton>().ForEach( e => e.clicked += () => Debug.Log("action clicked") ); 
+        //documentRoot.Query<MyUILibrary.ActionButton>().ForEach( element => element.clicked += () => Debug.Log("action clicked") ); 
+        //documentRoot.Query<MyUILibrary.ActionButton>().ForEach( element => element.RegisterCallback<PointerDownEvent>(OnPointerDown, TrickleDown.TrickleDown) );
+        //documentRoot.Query<MyUILibrary.ActionButton>().ForEach( element => element.RegisterCallback<ClickEvent>(OnClick, TrickleDown.TrickleDown) );
 
-        // redBox.RegisterCallback<PointerDownEvent>(OnPointerDown, TrickleDown.TrickleDown);
+        documentRoot.Query<MyUILibrary.ActionButton>().ForEach( element => element.uiActionVar = uiActionVar );
+
+
+
+
+        // element.RegisterCallback<ClickEvent>(evt => Debug.Log("Clicked Event"));
+
+        // element.RegisterCallback<PointerDownEvent>(OnPointerDown, TrickleDown.TrickleDown);
 
 // https://docs.unity3d.com/ScriptReference/UIElements.Button.html
 // https://github.com/Unity-Technologies/UIElementsExamples/blob/master/Assets/Examples/Editor/E20_DragAndDrop.cs
@@ -29,10 +41,19 @@ public class SetupActionButtons : MonoBehaviour
 
             
     }
+/*
+    public void OnClick( ClickEvent evt ){
 
-    public void OnPointerDown( PointerDownEvent evt ){
-        Debug.Log("PointerDownEvent");
+        ActionButton button = (ActionButton)evt.target;
+        Debug.Log("ClickEvent ActionButton:" + button.uiAction);
     }
 
+    public void OnPointerDown( PointerDownEvent evt ){
+
+        ActionButton button = (ActionButton)evt.target;
+
+        Debug.Log("PointerDownEvent ActionButton:" + button.uiAction);
+    }
+*/
 
 }

@@ -1,0 +1,12 @@
+Track World, An infinite possibility of random tracks for you to train on, start here, , Images/placeholder_03, Images/placeholder_04, None
+
+
+Infinite Track Run, An infinite track that goes on and on, you never get back to the start but can train drivers to all sorts of curves and hazards, Unlocked after completing ten laps, Images/placeholder_01, Images/placeholder_02, TenLap
+
+Chained to a rock, Experience unusual driving conditions by being chained to a heavy rock, Unlocked after your first victory, Images/placeholder_05, Images/placeholder_06, OneVictory
+
+Chase Wally, Score points by chasing another car and try to sabotage, Unlocked after your fifth victory, Images/placeholder_07, Images/placeholder_08, FiveVictory
+
+Rumble in the Jungle, A never ending rumble strip of jumps and rocks , Unlocked after your tenth victory, Images/placeholder_09, Images/placeholder_10, TenVictory
+
+TrainingListItem

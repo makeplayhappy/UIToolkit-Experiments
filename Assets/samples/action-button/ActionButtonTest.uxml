@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
     <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
-    <MyUILibrary.ActionButton tabindex="-1" enum-attr="Skip" text="ButtonWithAction" name="ActionTest" style="margin-bottom: 20px;" />
-    <ui:Button tabindex="-1" text="Button" display-tooltip-when-elided="true" style="margin-bottom: 20px;" />
+    <MyUILibrary.ActionButton tabindex="-1" enum-attr="ChooseRewards" text="ButtonWithAction" name="ActionTest" ui-action="TrainingSpeed" style="margin-bottom: 20px;" />
+    <MyUILibrary.ActionButton tabindex="-1" enum-attr="ChooseRewards" text="ButtonWithAction" name="ActionTest" ui-action="SetFuel" style="margin-bottom: 20px;" />
+    <MyUILibrary.ActionButton tabindex="-1" enum-attr="ChooseRewards" text="ButtonWithAction" name="ActionTest" ui-action="Welcome" style="margin-bottom: 20px;" />
 </ui:UXML>
