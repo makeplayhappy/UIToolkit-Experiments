@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcef8179bb7834c2aad205f4b65ef245, type: 3}
   m_Name: PlayerDataCache
   m_EditorClassIdentifier: 
-  racer: {fileID: 11400000, guid: a1b28a33a3ed14e9f97102ee118e28e2, type: 2}
+  racer: {fileID: 11400000, guid: b3899c0174c8d460aa1df781f50ffcec, type: 2}
   coins: 760

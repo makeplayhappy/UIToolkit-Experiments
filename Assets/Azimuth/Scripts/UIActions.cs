@@ -55,7 +55,7 @@ namespace Azimuth{
 
 
                 break;
-
+                
                 case UIAction.RacerMenu:
                     //Debug.Log("UIActions RacerMenu");
                     CarMenu.Show();
@@ -75,12 +75,34 @@ namespace Azimuth{
 
                 break;
 
-                case UIAction.Currency:
+                case UIAction.CurrencyMenu:
                     //Debug.Log("UIActions MainMenu");
                     CurrencyMenu.Show();
                     //ExShopMenu.Show();
 
                 break;
+
+                case UIAction.TrackWorldRewardsMenu:
+                    //Debug.Log("UIActions MainMenu");
+                    TrackWorldRewardsMenu.Show();
+                    //ExShopMenu.Show();
+                break;
+
+                case UIAction.TrackWorldGeneratorMenu:
+                    //Debug.Log("UIActions MainMenu");
+                    TrackWorldGeneratorMenu.Show();
+                    //ExShopMenu.Show();
+                break;
+
+                case UIAction.TrackWorldTraining:
+                    
+                    //start up training
+
+                break;
+
+                
+
+                
 
                 
 

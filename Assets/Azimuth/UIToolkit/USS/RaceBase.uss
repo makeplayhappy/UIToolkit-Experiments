@@ -14,10 +14,8 @@
     --danger-foreground: rgb(255, 255, 255);
     --darkbackground-foreground: rgb(255, 255, 255);
     --darkbackground-tint: rgb(200, 200, 200);
-
     --disabled-background: rgb(100, 100, 100);
     --disabled-foreground: rgb(200, 200, 200);
-
     -unity-font: resource('Fonts/Rubik/static/Rubik-Regular');
 }
 
@@ -59,32 +57,50 @@
     font-size: 120%;
 }
 
-.small, Label.small, 
-.icon Label.small{
+.small {
     font-size: 85%;
 }
 
-.tiny, Label.tiny, 
-.icon Label.tiny{
+Label.small {
+    font-size: 85%;
+}
+
+.icon Label.small {
+    font-size: 85%;
+}
+
+.tiny {
     font-size: 70%;
 }
 
-#body.showlayout{
+Label.tiny {
+    font-size: 70%;
+}
+
+.icon Label.tiny {
+    font-size: 70%;
+}
+
+#body.showlayout {
     background-color: rgb(135, 111, 71);
 }
 
 #body.showlayout #header {
     background-color: rgb(183, 212, 177);
 }
+
 #body.showlayout #main {
     background-color: rgb(179, 214, 214);
 }
+
 #body.showlayout #left {
     background-color: rgb(189, 174, 197);
 }
+
 #body.showlayout #right {
     background-color: rgb(199, 194, 217);
 }
+
 #body.showlayout #footer {
     background-color: rgb(255, 206, 105);
 }
@@ -118,7 +134,7 @@
     height: 100%;
 }
 
-#right .h1{
+#right .h1 {
     -unity-text-align: middle-center;
 }
 
@@ -136,6 +152,22 @@
 
 #body.narrow .right-col {
     width: 68.75%;
+}
+
+#body #fullwidth {
+    width: 70%;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+Label#title {
+    -unity-text-align: upper-center;
+    margin-top: 0;
+    margin-bottom: 40px;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(0, 0, 0, 0.05);
 }
 
 #footer {
@@ -220,7 +252,7 @@ ActionButton#confirm {
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    -unity-text-align: middle-center; 
+    -unity-text-align: middle-center;
     flex-direction: row;
 }
 
@@ -254,15 +286,20 @@ ActionButton#confirm {
     background-color: var(--info-background);
     color: var(--info-foreground);
 }
-.dark-background-text{
+
+.dark-background-text {
     color: var(--darkbackground-foreground);
 }
 
-.dark-background{
+.dark-background {
     -unity-background-image-tint-color: var(--darkbackground-tint);
 }
 
-Button.icon, ActionButton.icon {
+Button.icon {
+    flex-direction: row;
+}
+
+ActionButton.icon {
     flex-direction: row;
 }
 
@@ -295,6 +332,12 @@ Button.icon, ActionButton.icon {
     padding-right: -5px;
     padding-top: -5px;
     padding-bottom: -5px;
+}
+
+.icon-font{
+    -unity-font: resource('Fonts/FA/fa-solid-900');
+    -unity-font-definition: resource('Fonts/FA/fa-solid-900 SDF');
+    -unity-font-style: normal;
 }
 
 DropdownField#colorselect .unity-base-dropdown__container-outer {
@@ -344,17 +387,22 @@ TextField#racer-name TextInput {
     display: flex;
 }
 
-Button.mini-btn, ActionButton.mini-btn {
+Button.mini-btn {
     padding: 5px;
     margin-left: 0;
     margin-top: 0;
+}
 
+ActionButton.mini-btn {
+    padding: 5px;
+    margin-left: 0;
+    margin-top: 0;
 }
 
 .mini-btn Label.fonticon {
     font-size: 15px;
-    margin-left:0;
-    margin-right:0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #stats {
@@ -421,7 +469,13 @@ ScrollView#stats-scroller Scroller {
     right: 0;
 }
 
-Button.mini-btn .pull-right,
+Button.mini-btn .pull-right {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    font-size: 18px;
+}
+
 ActionButton.mini-btn .pull-right {
     position: absolute;
     top: 11px;
@@ -429,55 +483,144 @@ ActionButton.mini-btn .pull-right {
     font-size: 18px;
 }
 
-.off-right{
+.off-right {
     transition: translate 0.4s ease-in;
-    translate: 110% 0px;
-}
-.in-right{
-    translate: 0% 0px;
+    translate: 110% 0;
 }
 
-#achievements Label#text-label{
-    margin-left:auto;
-    margin-right:auto;
-    
+.in-right {
+    translate: 0 0;
 }
-#left #achievements Label#text-label{
+
+#achievements Label#text-label {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left #achievements Label#text-label {
     font-size: 15px;
-    margin-right:30px;
-    
+    margin-right: 30px;
 }
 
-LockableListItem, LockableListItem Button{
-    height:100%;
+LockableListItem {
+    height: 100%;
 }
 
-LockableListItem Label#list-text{
-    width:80%;
+LockableListItem Button {
+    height: 100%;
 }
 
-LockableListItem Button#lockstate{
+LockableListItem Label#list-text {
+    width: 80%;
+}
+
+LockableListItem Button#lockstate {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.unlocked{
-    display:flex;
-}
-.locked{
-    display:none;
-}
-:disabled .locked{
+.unlocked {
     display: flex;
 }
-:disabled Button{
+
+.locked {
+    display: none;
+}
+
+:disabled .locked {
+    display: flex;
+}
+
+:disabled Button {
     background-color: var(--disabled-background);
     color: var(--disabled-foreground);
 }
 
-:disabled .unlocked{
+:disabled .unlocked {
     display: none;
 }
 
+Slider {
+    height: 44px;
+    margin-bottom: 15px;
+}
+
+Slider Label {
+    -unity-font-definition: resource('Fonts/Rubik-SemiBold SDF 2');
+    font-size: 100%;
+    -unity-text-align: middle-left;
+}
+
+Slider #unity-dragger {
+    width: 44px;
+    height: 44px;
+    margin-top: 0;
+    top: 0;
+    border-radius: 22px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+Slider #unity-tracker {
+    height: 10px;
+    margin-top: -5px;
+    border-radius: 5px;
+}
+
+Slider TextField{
+    margin-left:10px;
+}
+
+Slider TextInput {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(255, 255, 255, 0.33);
+    border-width:0;
+}
+
+Slider TextField TextElement {
+    -unity-text-align: upper-center;
+}
+
+
+.steppable-field, .steppable-field Button, .steppable-field Label{
+    height: 50px;
+}
+.steppable-field{
+    flex-direction: row;
+}
+.steppable-field Button, .steppable-field Label{
+    margin: 0;
+}
+
+.steppable-field Button#prev{
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-width: 0; 
+}
+.steppable-field Button#next{
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    border-width: 0; 
+}
+.steppable-field Label{
+    -unity-text-align: middle-center; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+Label.tight-label{
+    margin:0;
+    padding:5px;
+}

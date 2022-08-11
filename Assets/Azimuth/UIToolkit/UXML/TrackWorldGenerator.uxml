@@ -1,0 +1,59 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
+    <ui:VisualElement name="body" class="narrow">
+        <ui:VisualElement name="header">
+            <ui:VisualElement name="header-left" class="left-col">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="back" ui-action="TrackWorldRewardsMenu" class="btn btn-solo icon btn-secondary">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Back" display-tooltip-when-elided="true" />
+                </Azimuth.ActionButton>
+            </ui:VisualElement>
+            <ui:VisualElement name="header-right" class="right-col" style="flex-direction: row-reverse;">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="Welcome" class="btn-info btn icon">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
+                </Azimuth.ActionButton>
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="OptionsMenu" class="btn-secondary btn icon">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" name="number-coins" />
+                </Azimuth.ActionButton>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="main">
+            <ui:VisualElement name="fullwidth">
+                <ui:Label tabindex="-1" text="Generate Track" display-tooltip-when-elided="true" name="title" class="h1" style="rotate: -1deg; margin-bottom: 20px;" />
+                <ui:VisualElement name="row" style="flex-grow: 0; height: auto; flex-direction: row;">
+                    <ui:VisualElement name="steppable" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); margin-right: auto;">
+                        <ui:Label tabindex="-1" text="Seed" display-tooltip-when-elided="true" class="tight-label" style="-unity-text-align: upper-center;" />
+                        <ui:VisualElement name="seed" class="steppable-field">
+                            <ui:Button tabindex="-1" text="" display-tooltip-when-elided="true" name="prev" class="icon-font" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="label-seed" />
+                            <ui:Button tabindex="-1" text="" display-tooltip-when-elided="true" name="next" class="icon-font" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="steppable" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); margin-left: auto; margin-right: auto;">
+                        <ui:Label tabindex="-1" text="Identifier" display-tooltip-when-elided="true" class="tight-label" style="-unity-text-align: upper-center;" />
+                        <ui:VisualElement name="identity" class="steppable-field">
+                            <ui:Button tabindex="-1" text="" display-tooltip-when-elided="true" name="prev" class="icon-font" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="label-identity" />
+                            <ui:Button tabindex="-1" text="" display-tooltip-when-elided="true" name="next" class="icon-font" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Button tabindex="-1" display-tooltip-when-elided="true" name="shuffle" class="btn icon btn-secondary" style="margin-top: auto; height: 50px; bottom: auto; position: relative; right: auto; margin-left: auto; margin-right: 0;">
+                        <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                        <ui:Label tabindex="-1" text="shuffle" display-tooltip-when-elided="true" name="rand" />
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="track-preview" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-top: 40px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="footer" style="flex-direction: row;">
+            <ui:VisualElement name="left-foot" class="left-col" />
+            <ui:VisualElement name="right-foot" class="right-col" style="flex-direction: row-reverse;">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="confirm" ui-action="TrackWorldTraining" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center;">
+                    <ui:Label tabindex="-1" text="Confirm" display-tooltip-when-elided="true" />
+                </Azimuth.ActionButton>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

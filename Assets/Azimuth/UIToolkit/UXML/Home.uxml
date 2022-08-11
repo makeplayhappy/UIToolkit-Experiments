@@ -10,7 +10,7 @@
                 </Azimuth.ActionButton>
             </ui:VisualElement>
             <ui:VisualElement name="header-right" class="right-col" style="flex-direction: row-reverse;">
-                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="Currency" class="btn-info btn icon">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="CurrencyMenu" class="btn-info btn icon">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
                 </Azimuth.ActionButton>
@@ -32,7 +32,7 @@
                 <ui:Instance template="Azimuth.RacerList" name="Azimuth.RacerList" />
             </ui:VisualElement>
             <ui:VisualElement name="left" class="left-col" style="flex-direction: column;">
-                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="new-racer" ui-action="NewRacer" class="btn-primary btn icon btn-expander">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="new-racer" ui-action="None" class="btn-primary btn icon btn-expander">
                     <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
                     <ui:Label tabindex="-1" text="New Racer" display-tooltip-when-elided="true" />
                 </Azimuth.ActionButton>

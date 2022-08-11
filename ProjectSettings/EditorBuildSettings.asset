@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/samples/color-field/ExampleColor_and_Toggle.unity
-    guid: 99ca7a3b457e948b2b07d6e309d0246f
+    path: Assets/Scenes/MenuPrefabSetup.unity
+    guid: 0140ec26e598643f7bc60bb615365816
   m_configObjects: {}

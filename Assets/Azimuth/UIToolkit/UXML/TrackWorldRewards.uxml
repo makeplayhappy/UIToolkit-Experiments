@@ -1,0 +1,42 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Azimuth/UIToolkit/USS/RaceBase.uss?fileID=7433441132597879392&amp;guid=b3a9dac272ca84499a97f0ac4b378b30&amp;type=3#RaceBase" />
+    <ui:VisualElement name="body" class="narrow">
+        <ui:VisualElement name="header">
+            <ui:VisualElement name="header-left" class="left-col">
+                <Azimuth.ActionButton tabindex="-1" text=" " display-tooltip-when-elided="true" name="back" ui-action="RacerMenu" class="btn btn-solo icon btn-secondary">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Back" display-tooltip-when-elided="true" />
+                </Azimuth.ActionButton>
+            </ui:VisualElement>
+            <ui:VisualElement name="header-right" class="right-col" style="flex-direction: row-reverse;">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="Welcome" class="btn-info btn icon">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="00" display-tooltip-when-elided="true" name="number-coins" />
+                </Azimuth.ActionButton>
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="coins" ui-action="OptionsMenu" class="btn-secondary btn icon">
+                    <ui:Label tabindex="-1" text="" display-tooltip-when-elided="true" name="ico" class="fonticon" />
+                    <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" name="number-coins" />
+                </Azimuth.ActionButton>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="main">
+            <ui:VisualElement name="fullwidth">
+                <ui:Label tabindex="-1" text="Training Rewards" display-tooltip-when-elided="true" name="title" class="h1" style="rotate: -2deg;" />
+                <ui:Slider picking-mode="Ignore" label="Complete Lap" value="42" high-value="1" show-input-field="true" low-value="-1" inverted="false" focusable="false" name="slider-lap" />
+                <ui:Slider picking-mode="Ignore" label="Get to Stage gate" value="42" high-value="1" show-input-field="true" low-value="-1" inverted="false" focusable="false" name="slider-lap" />
+                <ui:Slider picking-mode="Ignore" label="Forward Speed" value="42" high-value="1" show-input-field="true" low-value="-1" inverted="false" focusable="false" name="slider-forward" />
+                <ui:Slider picking-mode="Ignore" label="Crash into Wall" value="-0.9" high-value="1" show-input-field="true" low-value="-1" inverted="false" focusable="false" name="slider-wallcrash" />
+                <ui:Slider picking-mode="Ignore" label="Bump Competitor" value="-0.25" high-value="1" show-input-field="true" low-value="-1" inverted="false" focusable="false" name="slider-collision" />
+                <ui:Slider picking-mode="Ignore" label="Lookahead" value="0.25" high-value="1" show-input-field="true" low-value="0" inverted="false" focusable="false" name="slider-wallcrash" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="footer" style="flex-direction: row;">
+            <ui:VisualElement name="left-foot" class="left-col" />
+            <ui:VisualElement name="right-foot" class="right-col" style="flex-direction: row-reverse;">
+                <Azimuth.ActionButton tabindex="-1" display-tooltip-when-elided="true" name="confirm" ui-action="TrackWorldGeneratorMenu" class="btn btn-success" style="flex-direction: row-reverse; -unity-text-align: middle-center;">
+                    <ui:Label tabindex="-1" text="Confirm" display-tooltip-when-elided="true" />
+                </Azimuth.ActionButton>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

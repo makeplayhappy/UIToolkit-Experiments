@@ -25,7 +25,7 @@ namespace Azimuth
 
         public void SetupUIActions(){
             if( uiAction != null){
-                Debug.Log("Simple Menu setup UI ActionButton");
+                //Debug.Log("Simple Menu setup UI ActionButton");
                 documentRoot.Query<Azimuth.ActionButton>().ForEach( element => { if(element.uiActionVar == null ){element.uiActionVar = uiAction;}  } );
             }
         }

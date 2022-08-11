@@ -1,9 +1,12 @@
 // from https://forum.unity.com/threads/ui-builder-and-custom-elements.785129/
 using UnityEngine;
 using UnityEngine.UIElements;
+#if UNITY_EDITOR
+using UnityEditor.UIElements;
+#endif
 using System.Collections;
 using System.Collections.Generic;
-using  UnityEditor.UIElements;
+
 
 using System;
 
@@ -27,7 +30,9 @@ using System;
             UxmlIntAttributeDescription m_Int = new UxmlIntAttributeDescription { name = "int-attr", defaultValue = 2 };
             UxmlLongAttributeDescription m_Long = new UxmlLongAttributeDescription { name = "long-attr", defaultValue = 3 };
             UxmlBoolAttributeDescription m_Bool = new UxmlBoolAttributeDescription { name = "bool-attr", defaultValue = false };
+#if UNITY_EDITOR
             UxmlColorAttributeDescription m_Color = new UxmlColorAttributeDescription { name = "color-attr", defaultValue = Color.red };
+#endif
             UxmlEnumAttributeDescription<Existance> m_Enum = new UxmlEnumAttributeDescription<Existance> { name = "enum-attr", defaultValue = Existance.Bad };
      
             public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription
@@ -59,10 +64,10 @@ using System;
      
                 ate.boolAttr = m_Bool.GetValueFromBag(bag, cc);
                 ate.Add(new Toggle("Toggle") { value = ate.boolAttr });
-     
+#if UNITY_EDITOR     
                 ate.colorAttr = m_Color.GetValueFromBag(bag, cc);
                 ate.Add(new ColorField("Color") { value = ate.colorAttr });
-     
+#endif     
                 ate.enumAttr = m_Enum.GetValueFromBag(bag, cc);
                 var en = new EnumField("Enum");
                 en.Init(m_Enum.defaultValue);
@@ -77,6 +82,8 @@ using System;
         public int intAttr { get; set; }
         public long longAttr { get; set; }
         public bool boolAttr { get; set; }
+#if UNITY_EDITOR
         public Color colorAttr { get; set; }
+#endif
         public Existance enumAttr { get; set; }
     }
